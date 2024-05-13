@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Image Classifier";
+}
+
+<h1>Object Detection using Azure Cognitive Service and .NET</h1>
+<br />
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach (var key in ViewData.ModelState.Keys)
+            {
+                foreach (var error in ViewData.ModelState[key]!.Errors)
+                {
+                    <li>@error.ErrorMessage</li>
+                }
+            }
+        </ul>
+    </div>
+}
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <input type="file" class="form-control" id="imageFile" name="imageFile">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Upload</button>
+}
+
+
+@if (!string.IsNullOrEmpty(ViewBag.ProcessedImage))
+{
+    <h2>Annotated Image:</h2>
+    <img src="data:image/jpeg;base64,@ViewBag.ProcessedImage" alt="Annotated Image" style="max-width: 500px; margin-bottom: 20px;">
+}
+
+
+@if (ViewBag.Results != null)
+{
+    <h2>Objects Detected:</h2>
+    <ul>
+        @foreach (var result in ViewBag.Results)
+        {
+            <li>@result.ObjectProperty with confidence @result.Confidence</li>
+        }
+    </ul>
+}

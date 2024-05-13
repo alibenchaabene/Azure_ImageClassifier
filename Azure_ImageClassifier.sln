@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Azure_ImageClassifier", "Azure_ImageClassifier\Azure_ImageClassifier.csproj", "{CC39F213-9C20-4C63-8D57-50708A41B961}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC39F213-9C20-4C63-8D57-50708A41B961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC39F213-9C20-4C63-8D57-50708A41B961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC39F213-9C20-4C63-8D57-50708A41B961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC39F213-9C20-4C63-8D57-50708A41B961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A694C24B-4523-441C-9D39-57EA9E2DB4BA}
+	EndGlobalSection
+EndGlobal
